@@ -7,7 +7,7 @@ select
 	from employees e, salaries s
 	where e.emp_no = s.emp_no
 	and s.to_date = '9999-01-01'
-	and s.salary < (
+	and s.salary > (
 		select avg(salary)
 			from salaries
 			where to_date='9999-01-01'
